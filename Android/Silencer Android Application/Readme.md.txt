@@ -1,0 +1,1 @@
+On specific time events the android phone would automatically switch its sound profile.
