@@ -1,0 +1,51 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/plain"
+    android:orientation="vertical"
+    android:gravity="center"
+    tools:context="com.example.parentalcontrol.Sign_up" >
+	
+    <TextView 
+       android:text="Create an Account"
+       android:textColor="#ffff"
+       android:textSize="30dp"
+       android:layout_gravity="center"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       
+       /> 
+    <EditText 
+        android:id="@+id/sname"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:hint="Username"
+        />
+    
+    <EditText 
+        android:id="@+id/spassword"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:hint="Password"
+        />
+    <EditText 
+        android:id="@+id/semail"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:hint="Email"
+        />
+    <EditText 
+        android:id="@+id/sphoneNo"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:hint="Phone No."
+        />
+    <Button 
+        android:id="@+id/ssignup"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:text="SignUp"
+        android:onClick="signIn"
+       />
+</LinearLayout>
