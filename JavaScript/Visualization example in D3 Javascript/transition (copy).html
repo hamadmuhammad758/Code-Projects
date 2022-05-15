@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <script type = "text/javascript" src = "https://d3js.org/d3.v4.min.js"></script>
+   </head>
+
+   <body>
+    
+      <script>
+
+	var svgwidth=400;
+	var svgheight=400;
+	var barPadding = 5;
+	var barheight=25;
+	var circlestartx=svgwidth/2;	
+	var circlestarty=svgheight/2;
+	
+	var dataset = [4, 60, 8, 12, 181, 330, 400, 120, 160,400];
+	/*var dataset = [400,400,300,200,100,50,25];*/
+	dataset.sort(function(a, b){return b-a});
+	/*var dataset = [100,80,60,40]; */
+	var maxindata=(Math.max.apply(null,dataset))/2;
+	var scalefactor=((svgwidth)/(maxindata));
+	var color = ["red","green","blue","orange"];
+	var color=[" #C6D5CD","#5A6A62","#542733","#E94C6F"];
+
+	var body=d3.select("body")
+	.append("svg")	
+	.attr("width",svgwidth)
+	.attr("height",svgheight)	
+	.style("background-color","#00ced1");
+	
+	var graph=body.selectAll("g")
+	.data(dataset)
+	.enter()	
+	.append("g")
+	.attr("transform",function(d,i){ return "translate(0 0)";}) 
+	
+	var circle=graph.append("circle")	
+	.attr("cx",function(d){ return circlestartx; })
+	.attr("cy",function(d){ return circlestarty;})
+	.attr("r",function(d){ return (d*scalefactor)/4; });
+
+	
+	d3.selectAll("circle")
+	.transition()
+	.delay( function(d,i){return 200*i;})
+	.duration(1000)
+	.style("fill",function(d,i){ return  color[Math.round(i%4)];});	
+
+
+      </script>
+
+
+
+   </body>
+</html>
+
+

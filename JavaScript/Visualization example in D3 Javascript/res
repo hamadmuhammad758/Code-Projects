@@ -1,0 +1,28 @@
+electron js
+PyQt
+https://sciter.com/
+PyFladesk
+https://www.qt.io/
+_______________________
+
+
+It appears that you need application:
+
+that uses “rich UI” - uses iconographics, etc.
+able to run on different hardware configurations - standard and high-DPI monitors.
+supports different locales/languages.
+with distribution as compact as possible as this is a utility.
+If so I would consider Sciter (HTML/CSS/SVG/script UI engine). And Sciter has Python bindings already.
+
+________________________
+
+
+
+load a binary firmware
+a visual interface to apply all commands of binwalk
+report the output on front end
+visualizaton of some 
+
+_______________________
+
+https://python.libhunt.com/pysciter-alternatives

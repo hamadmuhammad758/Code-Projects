@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <script type = "text/javascript" src = "https://d3js.org/d3.v4.min.js"></script>
+   </head>
+
+   <body>
+    
+      <script>
+
+	var svgwidth=400;
+	var svgheight=400;
+	var barPadding = 5;
+	var scalefactor=20;
+	var barheight=25;
+	
+	var dataset = [80, 100, 56, 120, 180, 30, 40, 120, 160,400];
+
+	var scalefactor=((svgwidth-30)/(Math.max.apply(null,dataset)));
+
+	var color = ["red","green","blue","orange"];
+	var color=[" #C6D5CD","#5A6A62","#542733","#E94C6F"];
+
+	var ss=d3.select("body")
+	.append("svg")	
+	.attr("width",svgwidth)
+	.attr("height",svgheight)	
+	.style("background-color","#00ced1");
+	
+
+	var bar=ss.selectAll("g")
+		.data(dataset)
+		.enter()
+		.append("g")		
+		.attr("transform",function(d,i){return "translate(0 "+i*1.2*barheight+")";})
+		.style("fill",function(d,i){ return  color[Math.round(i%4)];});	
+	bar.append("rect")
+		.transition()
+		.duration(2000)
+		.attr("width",function(d){ return d*scalefactor;} )
+		.attr("height",barheight);
+
+	bar.append("text")
+	.attr("x",function(d){ return d*scalefactor;})
+	.attr("y",function(d){ return barheight/2;})
+	.style("fill","black")
+	.attr("dy","0.35em")
+	.transition()
+	.duration(2000)
+	.text(function(d){ return d;});
+
+      </script>
+
+
+
+   </body>
+</html>
+
+
