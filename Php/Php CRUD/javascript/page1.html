@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+  <html>
+	<head>
+		<script type="text/javascript" >
+				var i,j;
+				function  digit(i)
+				{
+				document.getElementById("display").value=document.getElementById('display').value+i;
+				}
+				
+				
+function operation(j)
+{
+		if(j==1)
+		{
+		op1=parseFloat(document.getElementById('display').value);
+		document.getElementById('display').value="";
+		op=1;
+		}
+		if(j==2)
+		{
+		op1=parseFloat(document.getElementById('display').value);
+		document.getElementById('display').value="";
+		op=2;
+		}
+		if(j==3)
+		{
+		op1=parseFloat(document.getElementById('display').value);
+		document.getElementById('display').value="";
+		op=3;
+		}
+		if(j==4)
+		{
+		op1=parseFloat(document.getElementById('display').value);
+		document.getElementById('display').value="";
+		op=4;
+		}
+		if(j==5)
+			{
+			op2=parseFloat(document.getElementById('display').value);
+			alert(op2);
+			if(op==1)
+			{
+			f=op1+op2;
+			document.getElementById('display').value=f;
+			}
+			else if(op==2)
+			{
+			f=op1-op2;
+			document.getElementById('display').value=f;
+			}
+			else if(op==3)
+			{
+			f=op1*op2;
+			document.getElementById('display').value=f;
+			}
+			else if(op==4)
+			{
+			f=op1/op2;
+			document.getElementById('display').value=f;
+			}
+
+}
+				
+				/*function operation(j)
+				{
+					if(j==1)
+					{
+					var op1=parseFloat(document.getElementById('display').value);
+					document.getElementById("display").value="";
+					var op=1;
+					}
+					
+					if(j==5)				
+					{
+						var op2=parseFloat(document.getElementById("display").value);
+						alert(op1);
+						alert(op2);
+						alert(op);
+						if(op==1)
+						{
+						alert("num2");
+						var f=num1+num2;
+						document.getElementById('display').value=f;
+						}
+					
+							
+					}*/
+				
+				}
+				
+		</script>
+	
+	</head>
+
+	<body>
+	  <form>
+	  
+		<input type="text"  id="display" />
+		<br>
+		
+		<input type="button" value="1" onclick="digit(1)" />
+		<input type="button" value="2" onclick="digit(2)" />
+		<input type="button" value="3" onclick="digit(3)" />
+		<input type="button" value="4" onclick="digit(4)" />
+		
+		<br>
+		
+		<input type="button" value="5" onclick="digit(5)" />
+		<input type="button" value="6" onclick="digit(6)" />
+		<input type="button" value="7" onclick="digit(7)" />
+		<input type="button" value="8" onclick="digit(8)" />
+		<input type="button" value="9" onclick="digit(9)" />
+		
+		<br>
+		
+		<input type="button" value="+" onclick="operation(1)" />
+		<input type="button" value="-" onclick="operation(2)"  />
+		<input type="button" value="*" onclick="operation(3)"  />
+		<input type="button" value="/"  onclick="operation(4)" />
+		<input type="button" value="="  onclick="operation(5)" />
+	  </form>
+	
+	</body>
+  </html>

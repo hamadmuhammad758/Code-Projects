@@ -1,0 +1,109 @@
+﻿<html>
+	<head>
+
+	<style type="text/css">
+			table{
+				
+				background:gray;
+				border:2px solid black;
+				
+				
+				}
+			#1{
+			    width:31px;
+				color:red;
+				height:30px;
+				}
+
+			#2{
+			    width:143px;
+				color:red;
+				height:30px;
+				}
+
+			#3{
+			    width:141px;
+			    border:20px solid black;
+	       		    font-weight:bold;
+			    height:25px;
+				}
+				
+
+
+
+
+
+
+	</style>
+		<script type = "text/javascript">	
+			var temp;
+			var a;
+			function abc(a){
+				
+				if(document.form1.text.value==0)
+					document.form1.text.value=a;
+				else
+					document.form1.text.value+=a;		
+			}
+
+			function func(c){
+				a=c;
+				temp=document.form1.text.value;
+				document.form1.text.value=0;
+			}
+
+			function equl(){
+				if(a=='+'){
+					document.form1.text.value=parseFloat(temp)+parseFloat(document.form1.text.value);
+				}
+				if(a=='-'){
+					document.form1.text.value=parseFloat(temp)-parseFloat(document.form1.text.value);
+				}
+				if(a=='*'){
+					document.form1.text.value=parseFloat(temp)*parseFloat(document.form1.text.value);
+				}
+				if(a=='/'){
+					document.form1.text.value=parseFloat(temp)/parseFloat(document.form1.text.value);
+				}
+			}
+			function saaf(){
+				document.form1.text.value=0;
+			}
+		</script>
+	</head>
+	
+	<body>	
+	   <center> <table>
+		<form name="form1">
+		<tr>	
+		<td colspan="4"><input type = "text" id="3" name = "text" value="0"/></td>
+		</tr>
+		<tr>
+		<td ><input type = "button" id="1"  value = "1" onclick="abc(1);"/></td>
+		<td> <input type = "button" id="1"  value = "2" onclick="abc(2);"/></td>
+		<td> <input type = "button" id="1"  value = "3" onclick="abc(3);"/></td>
+		<td ><input type = "button" id="1"  value = "4" onclick="abc(4);"/></td>
+		<tr><tr>							
+		<td ><input type = "button" id="1" value = "5" onclick="abc(5);"/></td>
+		<td ><input type = "button" id="1" value = "6" onclick="abc(6);"/></td>
+		<td ><input type = "button" id="1" value = "7" onclick="abc(7);"/></td>
+		<td ><input type = "button" id="1" value = "8" onclick="abc(8);"/></td>
+		<tr><tr>							
+		<td ><input type = "button" id="1" value = "9" onclick="abc(9);"/></td>
+		<td ><input type = "button" id="1" value = "0" onclick="abc(0);"/></td>
+		<td ><input type = "button" id="1" value = "." onclick="abc(.);"/></td>
+		<td ><input type = "button" id="1" value= "="  onclick="equl();"/></td>
+		<tr><tr>
+		<td ><input type = "button" id="1" value = "+" onclick="func('+');"/></td>
+		<td ><input type = "button" id="1" value = "-" onclick="func('-');"/></td>
+		<td ><input type = "button" id="1" value = "*" onclick="func('*');"/></td>
+		<td><input type =  "button" id="1" value = "/" onclick="func('/');"/></td>
+		</tr>
+		<tr>
+		<td colspan="4"><input type = "button" id="2" value ="clear" onclick= "saaf();"/></td>
+		</tr>
+		</form>
+		</table>
+		</center>
+	</body>
+</html>

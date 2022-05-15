@@ -1,0 +1,163 @@
+ <!DOCTYPE html>
+ <html>
+		<head>
+				<script type="text/javascript">
+					
+							
+							/*var a=1;
+							var a=document.getElementById("a").value;
+							var b=document.getElementById("b").value;
+							var c=document.getElementById("c").value;
+							var d=document.getElementById("d").value;
+							var e=document.getElementById("e").value;
+							var f=document.getElementById("f").value;
+							var g=document.getElementById("g").value;
+							var h=document.getElementById("h").value;
+							var i=document.getElementById("i").value;*/
+							
+	function display1(){
+						
+						if(document.getElementById("a").value=="1")
+						var a=new Array(document.getElementById("a").value);
+						document.getElementById("text").value=a;
+					
+					   }
+						
+function display2(){
+						if(document.getElementById("b").value=="2")
+						document.getElementById("text").value=document.getElementById("b").value;
+						}
+	function display3(){
+						if(document.getElementById       ("c").value=="3")
+						document.getElementById("text").value=document.getElementById("c").value;
+						}
+						
+	function display4(){
+						if(document.getElementById("d").value=="4")
+						document.getElementById("text").value=document.getElementById("d").value;
+						}
+	function display5(){
+						if(document.getElementById("e").value=="5")
+						document.getElementById("text").value=document.getElementById("e").value;
+						}
+	function display6(){
+						if(document.getElementById("f").value=="6")
+						document.getElementById("text").value=document.getElementById("f").value;
+						}
+	function display7(){
+						if(document.getElementById("g").value=="7")
+						document.getElementById("text").value=document.getElementById("g").value;
+						}
+	function display8(){
+						if(document.getElementById("h").value=="8")
+						document.getElementById("text").value=document.getElementById("h").value;
+						}
+	function display9(){
+						if(document.getElementById("i").value=="9")
+						document.getElementById("text").value=document.getElementById("i").value;
+						}			
+								
+						
+							
+				
+				
+				
+				
+				</script>
+		
+		</head>
+		
+		
+		<body>
+				<table border="1">
+						<tr>
+							<td >
+								<input type="text" name="textfield" id="text"/>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<table border="0">
+								<tr>
+									<td>
+									
+										<input type="button" name="textfield" value="1" id="a" onclick="display1();"/>
+									</td>
+									<td>
+										<input type="button" name="textfield" value="2" id="b" onclick="display2();"/>
+									</td>
+									<td>
+										<input type="button" name="textfield" value="3" id="c" onclick="display3();"/>
+									</td>
+									<td>
+										<input type="button" name="textfield" value="+"/>
+									</td>
+								</tr>
+								<tr>
+									<td>
+									
+										<input type="button" name="textfield" value="4" id="d" onclick="display4();"/>
+									</td>
+									<td>
+										<input type="button" name="textfield" value="5" id="e" onclick="display5();"/>
+									</td>
+									<td>
+										<input type="button" name="textfield" value="6" id="f" onclick="display6();"/>
+									</td>
+									<td>
+										<input type="button" name="textfield" value="x"/>
+									</td>
+								</tr>
+								<tr>
+									<td>
+									
+										<input type="button" name="textfield" value="7" id="g" onclick="display7();"/>
+									</td>
+									<td>
+										<input type="button" name="textfield" value="8" id="h" onclick="display8();"/>
+									</td>
+									<td>
+										<input type="button" name="textfield" value="9" id="i" onclick="display9();"/>
+									</td>
+									<td>
+										<input type="button" name="textfield" value="&divide;"/>
+									</td>
+								</tr>
+								<tr>
+									<td>
+									
+										<input type="button" name="textfield" value="*" />
+									</td>
+									<td>
+										<input type="button" name="textfield" value="0"/>
+									</td>
+									<td>
+										<input type="button" name="textfield" value="."/>
+									</td>
+									<td>
+										<input type="button" name="textfield" value="="   onclick="display();"/>
+									</td>
+								</tr>
+								</table>
+							</td>
+						</tr>
+							
+				
+				
+				
+				</table>
+		
+		</body>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ </html>

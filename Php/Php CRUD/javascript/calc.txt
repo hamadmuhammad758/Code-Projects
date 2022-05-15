@@ -1,0 +1,102 @@
+<html>
+	
+<head>
+		
+<script type="text/javascript" language="Javascript">
+			
+var operator, operand;
+
+			
+function Display(n) {
+				
+if(document.formCalc.txtDisplay.value == 0)
+					
+document.formCalc.txtDisplay.value = n;
+				
+else
+	
+{				
+document.formCalc.txtDisplay.value += n;
+			
+}
+
+			
+function Operation(op) {
+				
+operand = document.formCalc.txtDisplay.value;
+				
+document.formCalc.txtDisplay.value = 0;
+			
+
+	operator = op;
+			}
+
+			
+function Result() {
+				
+if(operator == '+') 
+					
+document.formCalc.txtDisplay.value = parseInt(operand) + parseInt(document.formCalc.txtDisplay.value);
+				
+else if(operator == '-')
+					
+document.formCalc.txtDisplay.value = parseInt(operand) - parseInt(document.formCalc.txtDisplay.value);
+				
+else if(operator == '*')
+					
+document.formCalc.txtDisplay.value = parseInt(operand) * parseInt(document.formCalc.txtDisplay.value);
+				
+else if(operator == '/')
+					
+document.formCalc.txtDisplay.value = parseInt(operand) / parseInt(document.formCalc.txtDisplay.value);
+		
+	}
+		
+</script>
+	
+</head>
+	
+<body>
+		
+<h2>Calculator</h2>
+		
+<form name="formCalc">
+			
+<input type="text" name="txtDisplay" value="0" /> <br />
+			
+<input type="button" value="0" onclick="Display(0);" />
+			
+<input type="button" value="1" onclick="Display(1);" />
+			
+<input type="button" value="2" onclick="Display(2);" />
+			
+<input type="button" value="3" onclick="Display(3);" />
+			
+<input type="button" value="4" onclick="Display(4);" />
+			
+<input type="button" value="5" onclick="Display(5);" />
+			
+<input type="button" value="6" onclick="Display(6);" />
+		
+	<input type="button" value="7" onclick="Display(7);" />
+		
+<input type="button" value="8" onclick="Display(8);" />
+			
+<input type="button" value="9" onclick="Display(9);" /> <br />
+			
+
+<input type="button" value="+" onclick="Operation('+');" />
+			
+<input type="button" value="-" onclick="Operation('-');" />
+			
+<input type="button" value="*" onclick="Operation('*');" />
+			
+<input type="button" value="/" onclick="Operation('/');" />
+			
+<input type="button" value="=" onclick="Result();" />
+			
+<input type="button" value="Clear" onclick="document.formCalc.txtDisplay.value=0;" />
+		
+</form>
+	</body>
+</html>
